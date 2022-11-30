@@ -1,0 +1,13 @@
+﻿@model IEnumerable<PartialViewAsgnmnt.Models.Product>
+@{
+    ViewBag.Title = "html.Partial";
+}
+<title>@ViewBag.Title</title>
+<h3>@ViewBag.Message</h3>
+
+<p>
+    The @@Html.Partial() method renders the specified partial view.
+    It accepts partial view name as a string parameter and returns MvcHtmlString.
+    It returns an HTML string, so you have a chance of modifying the HTML before rendering.
+</p>
+@Html.Partial("ProductDetails", Model)

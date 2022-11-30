@@ -1,0 +1,13 @@
+﻿@model IEnumerable<PartialViewAsgnmnt.Models.Product>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>html RenderAction Example</h2>
+<p>
+    The @@html.RenderAction() method executes the specified action method and renders the result.
+    The specified action method must be marked with the [ChildActionOnly] attribute and return the PartialViewResult using the PartialView() method.
+</p>
+<p>
+    @{Html.RenderAction("htmlRenderAction", Model);}
+</p>

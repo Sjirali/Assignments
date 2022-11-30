@@ -1,0 +1,14 @@
+﻿@model IEnumerable<PartialViewAsgnmnt.Models.Product>
+@{
+    ViewBag.Title = "html.RenderPartial";
+}
+<title>@ViewBag.Title</title>
+<h3>@ViewBag.Message</h3>
+
+<p>
+    The @@html.RenderPartial() method is the same as the @@html.Partial() method except that it writes the resulted HTML of a specified partial view into an HTTP response stream directly.
+    So, you can modify it's HTML before render.
+</p>
+@{
+    Html.RenderPartial("ProductDetails", Model);
+}
